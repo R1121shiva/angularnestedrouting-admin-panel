@@ -1,0 +1,32 @@
+<div class="login-section">
+    <div class="background">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <h3>Login Here</h3>
+      <div class="form-field">
+
+          <label for="username">Username</label>
+          <input type="text" placeholder="Email or Phone" id="username" name="username" ngModel required />
+          <div *ngIf="loginForm.controls['username']?.touched && loginForm.controls['username']?.invalid" class="error-message">
+            <span *ngIf="loginForm.controls['username']?.errors?.['required']">Username is required.</span>
+          </div>
+      </div>
+      <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" placeholder="Password" id="password" name="password" ngModel required />
+          <div *ngIf="loginForm.controls['password']?.touched && loginForm.controls['password']?.invalid" class="error-message">
+            <span *ngIf="loginForm.controls['password']?.errors?.['required']">Password is required.</span>
+          </div>
+      </div>
+  
+      <button type="submit" [disabled]="loginForm.invalid">Log In</button>
+  
+      <div class="social">
+        <div class="go">Google</div>
+        <div class="fb">Facebook</div>
+      </div>
+    </form>
+  </div>
+  

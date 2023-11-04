@@ -1,0 +1,24 @@
+.page-nt-found{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.page-nt-found h1{
+    font-size: 88px;
+    color: #0e559d;
+}
+.page-nt-found p{
+    font-size: 23px;
+    line-height: 35px;
+}
+.page-nt-found button{
+    background: #06a36e;
+    padding: 8px 20px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 23px;
+}
