@@ -1,7 +1,290 @@
 <div class="profile-settings">
+  <div class="profile-settings">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-        <mat-tab label="First">Content 1</mat-tab>
-        <mat-tab label="Second">Content 2</mat-tab>
-        <mat-tab label="Third">Content 3</mat-tab>
-      </mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label class="d-flex space-2">
+          <mat-icon>perm_identity</mat-icon>
+          Account
+        </ng-template>
+        <div class="panel">
+          <div class="account-header">
+            <div class="user-profile-pic">
+              <img
+                src="../../../../assets/images/profile_image.png"
+                alt="profile-image"
+              />
+            </div>
+            <div class="upload-info">
+              <div class="but-group">
+                <button mat-raised-button color="primary">
+                  Upload new Photo
+                </button>
+                <button mat-stroked-button color="warn">RESET</button>
+              </div>
+              <p>Allowed PNG or JPEG. Max size of 800K.</p>
+            </div>
+          </div>
+          <div class="form-section">
+            <form>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>User Name</mat-label>
+                      <input matInput placeholder="User Name" />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Name</mat-label>
+                      <input matInput placeholder="Name" />
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Email</mat-label>
+                      <input matInput placeholder="email" />
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Role</mat-label>
+                      <mat-select placeholder="Select Company">
+                        <mat-option value="company1">Admin</mat-option>
+                        <mat-option value="company2">Author</mat-option>
+                        <mat-option value="company3">Editor</mat-option>
+                        <mat-option value="company3">Maintainer</mat-option>
+                        <mat-option value="company3">Subscriber</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Status</mat-label>
+                      <mat-select placeholder="Select Company">
+                        <mat-option value="company1">Active</mat-option>
+                        <mat-option value="company2">InActive</mat-option>
+                        <mat-option value="company3">Pending</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Company</mat-label>
+                      <input matInput placeholder="Company" />
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex space-2">
+                  <button mat-raised-button color="primary">
+                    Save Changes
+                  </button>
+                  <button mat-stroked-button>Basic</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>https</mat-icon>
+          Security
+        </ng-template>
+        <div class="panel">
+          <div class="security-section">
+            <form [formGroup]="signin">
+              <div class="row">
+                <div class="col-6">
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Current Password</mat-label>
+                      <input matInput [type]="currentHide ? 'password' : 'text'" placeholder="Current Password" formControlName="currentPassword" required />
+                      <mat-icon matSuffix (click)="currentHide = !currentHide">{{currentHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>New Password</mat-label>
+                      <input matInput [type]="newHide ? 'password' : 'text'" placeholder="New Password" formControlName="newPassword" required/>
+                      <mat-icon matSuffix (click)="newHide = !newHide">{{newHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                  </div>
+                  <div class="form-field">
+                    <mat-form-field appearance="outline" style="width: 100%">
+                      <mat-label>Confirm New Password</mat-label>
+                      <input matInput [type]="confirmHide ? 'password' : 'text'" placeholder="Confirm New Password" formControlName="confirmPassword" required/>
+                      <mat-icon matSuffix (click)="confirmHide = !confirmHide">{{confirmHide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="right-section-img">
+                    <img
+                      src="../../../../assets/images/pose-m-1.png"
+                      alt="dumm-imge"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="two-factor-auth">
+                <h2 class="d-flex space-2">
+                  <span><mat-icon> vpn_key</mat-icon></span
+                  >Two-factor authentication
+                </h2>
+                <div class="two-factor-text">
+                  <button mat-raised-button color="primary">
+                    <mat-icon>lock_open</mat-icon>
+                  </button>
+                  <h3>Two factor authentication is not enabled yet.</h3>
+                  <p>
+                    Two-factor authentication adds an additional layer of
+                    security to your account by requiring more than just a
+                    password to log in. Learn more.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 d-flex space-2">
+                  <button mat-raised-button color="primary" (click)="saveChanges()">
+                    Save Changes
+                  </button>
+                  <button mat-stroked-button>Basic</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <mat-icon>apps</mat-icon>
+          info
+        </ng-template>
+        <div class="panel">
+          <form>
+            <div class="bio">
+              <div class="row">
+                <div class="col-12">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>bio</mat-label>
+                    <input matInput placeholder="bio" [value]="bioValue" />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Birth Date</mat-label>
+                    <input
+                      matInput
+                      placeholder="Bio"
+                      [matDatepicker]="picker"
+                    />
+                    <mat-datepicker-toggle
+                      matSuffix
+                      [for]="picker"
+                    ></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Phone</mat-label>
+                    <input
+                      matInput
+                      type="number"
+                      placeholder="Ex 858565652525"
+                      pattern="[0-9]*"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Website</mat-label>
+                    <input
+                      matInput
+                      placeholder="email"
+                      value="https://postHub.com/"
+                    />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>Country</mat-label>
+                    <mat-select placeholder="Select Company">
+                      <mat-option
+                        *ngFor="let country of country"
+                        value="{{ country.value }}"
+                        >{{ country.label }}</mat-option
+                      >
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-form-field appearance="outline" style="width: 100%">
+                    <mat-label>language</mat-label>
+                    <mat-select placeholder="language">
+                      <mat-option
+                        *ngFor="let lang of language"
+                        value="{{ lang.value }}"
+                        >{{ lang.label }}</mat-option
+                      >
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-field">
+                  <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button
+                      *ngFor="let gender of gender"
+                      [value]="gender"
+                      >{{ gender }}</mat-radio-button
+                    >
+                  </mat-radio-group>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex space-2">
+                <button mat-raised-button color="primary">Save Changes</button>
+                <button mat-stroked-button>Basic</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </div>
