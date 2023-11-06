@@ -1,15 +1,60 @@
 <div class="dashboard-page">
-    <div class="sidebar">
-        <app-sidebar></app-sidebar>
-    </div>
-    <div class="content">
-        <div class="dash-header">
-            <div class="search-box">
-                <input type="text" class="input-search"/>
-                <span><i class="fa fa-search" style="font-size:14px;color: gray;"></i></span>
-            </div>
-            <div class="user-box"></div>
+  <div class="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+  <div class="content">
+    <div class="dash-header">
+      <div class="search-box">
+        <input type="text" class="input-search" />
+        <span
+          ><i class="fa fa-search" style="font-size: 14px; color: gray"></i
+        ></span>
+      </div>
+      <div class="user-box">
+        <mat-icon>wb_sunny</mat-icon>
+        <mat-icon>notifications</mat-icon>
+        <div style="position: relative">
+          <img
+            src="../../../assets/images/profile.png"
+            alt="profile"
+            [matMenuTriggerFor]="menu"
+          />
+          <span class="user-active"></span>
+          <mat-menu #menu="matMenu" style="width: 20%;">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon> email</mat-icon>
+              <span>Inbox</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon> chat_bubble_outline</mat-icon>
+              <span>Chat</span>
+            </button>
+            <hr/>
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+              <span>Setting</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>$</mat-icon>
+              <span>Pricing</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>question_answer</mat-icon>
+              <span>FAQ</span>
+            </button>
+            <hr/>
+            <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+              <span (click)="logout()">logout</span>
+            </button>
+          </mat-menu>
         </div>
-        <router-outlet></router-outlet>
+      </div>
     </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>

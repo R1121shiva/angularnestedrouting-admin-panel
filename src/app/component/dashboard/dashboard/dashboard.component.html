@@ -2,25 +2,121 @@
   <div class="row-1">
     <div class="congrate">
       <mat-card>
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>
+          <div>
+            <h2>Congratulations John! 🥳</h2>
+            <div class="congrate-text">
+              <div>
+                <p>Best seller of the month</p>
+                <h3>$42.8k</h3>
+                <button mat-raised-button color="primary">VIEW SALES</button>
+              </div>
+              <div class="tropy-image">
+                <img src="../../../../assets/images/trophy.png" alt="trophy" />
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
       </mat-card>
     </div>
     <div class="static-card">
       <mat-card>
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>
+          <app-cardheader [data]="staticCardHeader"></app-cardheader>
+          <div class="static-record">
+            <div class="box">
+              <mat-icon class="icon">trending_up</mat-icon>
+              <div>
+                <p>Sales</p>
+                <h2>245k</h2>
+              </div>
+            </div>
+            <div class="box">
+              <mat-icon class="icon">graphic_eq</mat-icon>
+              <div>
+                <p>Customers</p>
+                <h2>12.5k</h2>
+              </div>
+            </div>
+            <div class="box">
+              <mat-icon class="icon">phonelink</mat-icon>
+              <div>
+                <p>Products</p>
+                <h2>1.54k</h2>
+              </div>
+            </div>
+            <div class="box">
+              <mat-icon class="icon">$</mat-icon>
+              <div>
+                <p>Revenue</p>
+                <h2>$88k</h2>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
       </mat-card>
     </div>
   </div>
   <div class="row-1">
     <div class="congrate">
       <mat-card>
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>
+          <app-cardheader [data]="weeklyCardHeader"></app-cardheader>
+        </mat-card-content>
       </mat-card>
     </div>
     <div class="congrate">
       <mat-card>
-        <mat-card-content>Simple card</mat-card-content>
+        <mat-card-content>
+          <app-cardheader [data]="tEaringCardHeader"></app-cardheader>
+        </mat-card-content>
       </mat-card>
+    </div>
+    <div class="w-40">
+      <div class="row-1">
+        <div style="width: 50%">
+          <mat-card>
+            <app-cardheader [data]="profitCardHeader"></app-cardheader>
+            <div class="card-body-data">
+              <h4>Total Profit</h4>
+              <h2>$25.6k <sup style="color: green">+42%</sup></h2>
+            </div>
+          </mat-card>
+        </div>
+        <div style="width: 50%">
+          <mat-card>
+            <app-cardheader [data]="pricingCardHeader"></app-cardheader>
+            <div class="card-body-data">
+              <h4>Refunds</h4>
+              <h2>$78 <sup style="color: tomato">-15%</sup></h2>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row-1">
+        <div style="width: 50%">
+          <mat-card>
+            <mat-card-content>
+              <app-cardheader [data]="projectCardHeader"></app-cardheader>
+              <div class="card-body-data">
+                <h4>New Project</h4>
+                <h2>862 <sup style="color: tomato">-18%</sup></h2>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div style="width: 50%">
+          <mat-card>
+            <mat-card-content>
+              <app-cardheader [data]="queryCardHeader"></app-cardheader>
+              <div class="card-body-data">
+                <h4>Sales Queries</h4>
+                <h2>15 <sup style="color: tomato">-18%</sup></h2>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
     </div>
   </div>
 </div>

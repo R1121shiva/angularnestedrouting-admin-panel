@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="home-page">
+  <div class="center_wr">
+    <h1 style="text-align: center">Normal Crud Operation</h1>
+    <!-- <h5>{{ data }}</h5>
+    <button (click)="increment()">increment</button> -->
+    <div class="page-container">
+        <div class="form">
+            <input type="text" placeholder="wish" [(ngModel)]="modal.title"/>
+            <button (click)="save()">{{editable_id ? "update" : "save"}}</button>
+          </div>
+          <div class="table-side">
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Wish</th>
+                <th>Action</th>
+              </tr>
+              <tr *ngFor="let x of list; let i = index;">
+                <td>{{i + 1}}</td>
+                <td>{{x.title}}</td>
+                <td class="action">
+                  <button (click)="handleEdit(i)">Edit</button>
+                  <button (click)="handleDelete(i)">Delete</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+  </div>
+

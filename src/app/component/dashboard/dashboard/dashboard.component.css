@@ -1,6 +1,7 @@
 .mat-mdc-card{
     box-shadow: -1px 2px 4px rgba(0,0,0,0.4) !important;
-    margin: 20px;
+    margin: 10px;
+    padding: 16px;
 }
 
 .row-1{
@@ -11,4 +12,46 @@
 }
 .static-card{
     width: 70%;
+}
+.w-40{
+    width: 40%;
+}
+.congrate-text{
+    display: flex;
+}
+.congrate-text h3{
+    font-weight: bold;
+    color: #a372fd;
+}
+.tropy-image img{
+    width: 100px;
+}
+
+.static-record{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+.box{
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+.box p,h2{
+    margin: 0;
+}
+.icon{
+    display: flex;
+    background: #955bfd;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+}
+.card-body-data{
+    margin-top: 20px;
+}
+.card-body-data h4 ,h2{
+    margin: 0;
 }

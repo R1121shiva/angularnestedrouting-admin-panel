@@ -10,3 +10,19 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.center_wr{
+    width: 1200px;
+    margin: 0 auto;
+}
+.green{
+    background-color: green !important;
+}
+.gray{
+    background-color: gray !important;
+}
+.voilet{
+    background-color: violet !important;
+}
+.default{
+    background-color: #ffb101 !important;
+}

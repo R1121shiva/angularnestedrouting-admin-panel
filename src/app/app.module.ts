@@ -25,6 +25,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatMenuModule} from '@angular/material/menu';
+import { CardheaderComponent } from './component/common/cardheader/cardheader.component';
+import { AuthService } from './service/auth.service';
+import { HomeComponent } from './page/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminLayoutComponent,
     SidebarComponent,
     DashboardComponent,
-    AccountsettingComponent
+    AccountsettingComponent,
+    CardheaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -54,9 +60,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

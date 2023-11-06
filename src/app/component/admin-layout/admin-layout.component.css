@@ -30,6 +30,29 @@ input.input-search {
   border-radius: 15px;
   border: 1px solid gray;
 }
-input.input-search:focus{
-    border: 1px solid violet;
+input.input-search:focus {
+  border: 1px solid violet;
+}
+.user-box{
+  display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.user-box img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.user-active{
+  height: 12px;
+  width: 12px;
+  content: "";
+  background: #55cc67;
+  display: block;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  top: 29px;
+  right: 3px;
 }
