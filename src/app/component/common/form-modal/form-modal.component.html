@@ -1,0 +1,40 @@
+<div class="add-model">
+    <div class="model-header">
+        <h1 mat-dialog-title>{{updateId ? "Update Sport" : "Add Sport"}}</h1>
+        <span mat-button mat-dialog-close><mat-icon>close</mat-icon></span>
+    </div>
+  <div mat-dialog-content>
+    <form #sportform="ngForm" (ngSubmit)="onSubmit(sportform)">
+      <div class="form-field">
+        <input
+          type="text"
+          placeholder="Enter Sport"
+          id="sport"
+          name="sport"
+          ngModel
+          [(ngModel)]="sportValue"
+          required
+        />
+        <div
+          *ngIf="
+            sportform.controls['sport']?.touched &&
+            sportform.controls['sport']?.invalid
+          "
+          class="error-message"
+        >
+          <span *ngIf="sportform.controls['sport']?.errors?.['required']"
+            >Username is required.</span
+          >
+        </div>
+      </div>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="sportform.invalid"
+      >
+        {{ updateId ? "Update Sport" : "Add Sport" }}
+      </button>
+    </form>
+  </div>
+</div>

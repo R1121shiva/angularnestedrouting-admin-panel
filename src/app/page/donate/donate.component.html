@@ -1,1 +1,28 @@
-<p>donate works!</p>
+<div class="donate-page">
+    <h1 style="text-align: center;">CRUD + MODAL POPUP</h1>
+  <div class="center_wr">
+    <div class="page-heading">
+      <h2>Donate Page List</h2>
+      <button mat-raised-button color="primary" (click)="openModel()">
+        <mat-icon>add</mat-icon>Add Wish
+      </button>
+    </div>
+    <div class="table-section">
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Wish</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let x of list; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ x.sport }}</td>
+          <td class="action">
+            <button mat-raised-button color="primary" (click)="handleEdit(i + 1)">Edit</button>
+            <button mat-raised-button color="warn" (click)="handleDelete(i + 1)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

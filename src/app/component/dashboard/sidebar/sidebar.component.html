@@ -2,17 +2,17 @@
   <h4>Dashboard</h4>
   <div class="sidebar-menu">
     <ul>
-      <li>
-       <!-- <span><mat-icon>dashboard</mat-icon></span>  -->
+      <li [class.active]="isMenuItemActive('/dashboard')">
+       <span><mat-icon>dashboard</mat-icon></span> 
         <a
-          [class.active]="isMenuItemActive('/dashboard')"
+          
           routerLink="../dashboard"
           >Dashboard</a
         >
       </li>
-      <li>
+      <li [class.active]="isMenuItemActive('/dashboard/account-setting')">
+        <span><mat-icon>account_balance</mat-icon></span>
         <a
-          [class.active]="isMenuItemActive('/dashboard/account-setting')"
           routerLink="../dashboard/account-setting"
           >Account Setting</a
         >

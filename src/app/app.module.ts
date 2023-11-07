@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule , Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './component/header/header.component';
@@ -33,7 +33,8 @@ import { AboutComponent } from './page/about/about.component';
 import { ShopComponent } from './page/shop/shop.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModelComponent } from './component/common/model/model.component';
-
+import { FormModalComponent } from './component/common/form-modal/form-modal.component';
+import { DonateComponent } from './page/donate/donate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,9 @@ import { ModelComponent } from './component/common/model/model.component';
     HomeComponent,
     AboutComponent,
     ShopComponent,
-    ModelComponent
+    ModelComponent,
+    FormModalComponent,
+    DonateComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +75,7 @@ import { ModelComponent } from './component/common/model/model.component';
     MatMenuModule,
     MatDialogModule
   ],
-  providers: [AuthService],
+  providers: [AuthService , Title ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

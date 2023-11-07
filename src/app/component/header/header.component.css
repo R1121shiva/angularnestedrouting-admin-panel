@@ -1,6 +1,7 @@
 
 .header{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px;
     background-color: #eb5757;
@@ -19,6 +20,7 @@
 .menu ul{
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 .menu ul li a{

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -12,9 +13,11 @@ export class HomeComponent {
   list: any = [];
   editable_id: any = null;
   errorMessage : string ="";
-  constructor(private authservice: AuthService) {}
+  titles : string = "jhone Doe"
+  constructor(private authservice: AuthService , private title:Title) {}
 
   ngOnInit() {
+    this.title.setTitle("normal crud operation");
     this.data = this.authservice.getCount();
     this.list;
   }

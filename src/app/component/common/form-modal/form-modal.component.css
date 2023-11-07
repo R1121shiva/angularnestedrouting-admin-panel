@@ -1,0 +1,33 @@
+.add-model{
+    width: 400px;
+}
+.form-field{
+    position: relative;
+    margin-bottom: 20px;
+}
+.error-message span{
+    position: absolute;
+    color: red;
+    font-size: 13px;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.model-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.model-header span{
+    position: relative;
+    margin-right: 29px;
+    cursor: pointer;
+}
