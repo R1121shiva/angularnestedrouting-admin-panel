@@ -1,1 +1,58 @@
-<p>about works!</p>
+<div class="about-page">
+  <div class="center_wr">
+    <h1 style="text-align: center">Crud Operation With Service</h1>
+    <ul style="margin: 40px">
+      <li>
+        It use two way binding
+        <span style="color: red; font-weight: bold">([ngModel])</span>.
+      </li>
+      <li>Create , Read , Update , Delete operation.</li>
+      <li>It use ngOnInt hook to render UI once.</li>
+      <li>
+        It use Service for perform
+        <span style="color: red; font-weight: bold">CRUD</span> Opearation.
+      </li>
+    </ul>
+    <div class="page-container">
+      <div class="form">
+        <mat-form-field class="example-form-field">
+          <mat-label>Enter Title</mat-label>
+          <input matInput type="text" [(ngModel)]="modal.title" />
+          <button
+            *ngIf="modal.title"
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="modal.title = ''"
+          >
+            <mat-icon>close</mat-icon>
+          </button> </mat-form-field
+        ><br />
+        <button mat-raised-button color="primary" (click)="save()">
+          {{ editable_id ? "update" : "save" }}
+        </button>
+      </div>
+      <div class="table-side">
+        <table>
+          <tr>
+            <th>Id</th>
+            <th>Wish</th>
+            <th>Action</th>
+          </tr>
+          <tr *ngFor="let x of list; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ x.title }}</td>
+            <td class="action">
+              <button mat-mini-fab color="primary" (click)="handleEdit(i + 1)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-mini-fab color="warn" (click)="handleDelete(i + 1)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

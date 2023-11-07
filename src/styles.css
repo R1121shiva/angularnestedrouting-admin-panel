@@ -26,3 +26,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .default{
     background-color: #ffb101 !important;
 }
+
+.txt-success{
+    color: green !important;
+}
+.txt-danger{
+    color: red !important;
+}

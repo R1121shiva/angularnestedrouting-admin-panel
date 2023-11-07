@@ -1,11 +1,17 @@
 <div class="home-page">
   <div class="center_wr">
     <h1 style="text-align: center">Normal Crud Operation</h1>
+    <ul style="margin:40px">
+      <li>It use two way binding ([ngModel]).</li>
+      <li>Create , Read , Update , Delete operation.</li>
+      <li>It use ngOnInt hook to render UI once.</li>
+    </ul>
     <!-- <h5>{{ data }}</h5>
     <button (click)="increment()">increment</button> -->
     <div class="page-container">
         <div class="form">
-            <input type="text" placeholder="wish" [(ngModel)]="modal.title"/>
+            <input type="text" placeholder="wish" [(ngModel)]="modal.title" required/>
+            <p>{{errorMessage}}</p>
             <button (click)="save()">{{editable_id ? "update" : "save"}}</button>
           </div>
           <div class="table-side">
@@ -19,8 +25,8 @@
                 <td>{{i + 1}}</td>
                 <td>{{x.title}}</td>
                 <td class="action">
-                  <button (click)="handleEdit(i)">Edit</button>
-                  <button (click)="handleDelete(i)">Delete</button>
+                  <button (click)="handleEdit(i+1)">Edit</button>
+                  <button (click)="handleDelete(i+1)">Delete</button>
                 </td>
               </tr>
             </table>

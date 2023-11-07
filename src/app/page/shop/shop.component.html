@@ -1,1 +1,61 @@
-<p>shop works!</p>
+<div class="shop-page">
+    <div class="center_wr">
+      <h1 style="text-align: center">Crud Operation With LOCAL-STORAGE</h1>
+      <h3 style="margin:0">Important Point :-</h3>
+      <ul style="margin: 40px">
+        <li>
+          It use two way binding
+          <span style="color: red; font-weight: bold">([ngModel])</span>.
+        </li>
+        <li>Create , Read , Update , Delete operation.</li>
+        <li>It use ngOnInt hook to render UI once.</li>
+        <li>
+          It use <span style="color: rgb(205, 29, 143); font-weight: bold">localStorage</span> for perform
+          <span style="color: red; font-weight: bold">CRUD</span> Opearation.
+        </li>
+        <li>I have also used Material Dailog.</li>
+      </ul>
+      <div class="page-container">
+        <div class="form">
+          <mat-form-field class="example-form-field">
+            <mat-label>Enter Sport</mat-label>
+            <input matInput type="text" [(ngModel)]="modal.sport" />
+            <button
+              *ngIf="modal.sport"
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              (click)="modal.sport = ''"
+            >
+              <mat-icon>close</mat-icon>
+            </button> </mat-form-field
+          ><br />
+          <button mat-raised-button color="primary" (click)="save()">
+            {{ editable_id ? "update" : "save" }}
+          </button>
+        </div>
+        <div class="table-side">
+          <table>
+            <tr>
+              <th>Id</th>
+              <th>Wish</th>
+              <th>Action</th>
+            </tr>
+            <tr *ngFor="let x of list; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ x.sport }}</td>
+              <td class="action">
+                <button  mat-raised-button color="primary" (click)="handleEdit(i + 1)">
+                  edit
+                </button>
+                <button mat-raised-button color="warn" (click)="handleDelete(i + 1)">
+                  delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  

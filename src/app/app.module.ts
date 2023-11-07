@@ -29,6 +29,11 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CardheaderComponent } from './component/common/cardheader/cardheader.component';
 import { AuthService } from './service/auth.service';
 import { HomeComponent } from './page/home/home.component';
+import { AboutComponent } from './page/about/about.component';
+import { ShopComponent } from './page/shop/shop.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModelComponent } from './component/common/model/model.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +47,10 @@ import { HomeComponent } from './page/home/home.component';
     DashboardComponent,
     AccountsettingComponent,
     CardheaderComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    ShopComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +69,8 @@ import { HomeComponent } from './page/home/home.component';
     MatNativeDateModule,
     MatRadioModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

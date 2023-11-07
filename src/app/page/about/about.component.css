@@ -1,0 +1,25 @@
+.about-page{
+    padding: 40px 0px;
+}
+.page-container{
+    display: flex;
+    justify-content: space-between;
+}
+.table-side{
+    width: 50%;
+}
+table{
+    border: 1px solid gray;
+    width: 100%;
+    border-collapse: collapse;
+}
+td,th{
+    border: 1px solid gray;
+    text-align: center;
+    padding: 5px;
+}
+.action{
+    display: flex;
+    justify-content: center;
+    gap:15px;
+}
